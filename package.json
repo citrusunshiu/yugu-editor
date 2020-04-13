@@ -2,6 +2,8 @@
   "name": "yugu-editor",
   "version": "0.1.0",
   "private": true,
+  "main": "src/main.js",
+  "homepage": "./",
   "dependencies": {
     "@reduxjs/toolkit": "^1.1.0",
     "@testing-library/jest-dom": "^4.2.4",
@@ -16,7 +18,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "dev" : "nf start"
+
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,6 +43,6 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
-    "jest": "^25.3.0"
+    "foreman": "^3.0.1"
   }
 }
