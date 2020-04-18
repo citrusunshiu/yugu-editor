@@ -1,0 +1,46 @@
+{
+    "name": "Sample Unit",
+    "role": "Melee",
+    "classification": "Regular",
+    "specialResources": [
+        {
+            "resource": "TestResource1",
+            "maxValue": 100
+        },
+        {
+            "resource": "TestResource2",
+            "maxValue": 5
+        }
+    ],
+    "hpScaling": 100,
+    "mpScaling": 100,
+    "mpRegenScaling": 100,
+    "physicalAttackScaling": 100,
+    "magicalAttackScaling": 100,
+    "physicalDefenseScaling": 100,
+    "magicalDefenseScaling": 100,
+    "speedScaling": 100,
+    "staggerThresholdScaling": 100,
+    "skills": [
+        {
+            "skillJSONFilePath": "./skill.json",
+            "levelObtained": 1,
+            "progressionPointObtained": 1
+        }
+    ],
+    "actions": [
+        {
+            "className": "TestOWOAction"
+        }
+    ],
+    "overworldAIs": [
+        {
+            "className": "RandomMove"
+        }
+    ],
+    "encounterAIs": [
+        {
+            "className": "RandomSkill"
+        }
+    ]
+}
