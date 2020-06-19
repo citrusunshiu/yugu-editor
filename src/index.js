@@ -5,6 +5,7 @@ import App from './app/App';
 import configureStore from './app/configurestore';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const store = configureStore()
 
