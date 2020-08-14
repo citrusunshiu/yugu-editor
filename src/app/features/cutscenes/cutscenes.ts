@@ -1,22 +1,56 @@
+import { TilemapPosition } from "src/app/classes/utilities";
+
 // classes
-interface CutsceneEditor {
+export interface CutsceneEditor {
     id: number;
 }
 
 interface Cutscene {
-
+    version: 1;
+    nameID: string;
+    scenes: Scene[];
 }
 
 interface Scene {
-
+    version: 1;
+    instanceJSONFileName: string;
+    geologyInformation: {
+        year: number;
+        season: string;
+        date: number;
+        time: string;
+    };
+    isCinematic: boolean;
+    units: [
+        {
+            unitJSONFileName: string;
+            unitPosition: TilemapPosition;
+        }
+    ];
+    sceneChoreographies: SceneChoreography[];
 }
 
 interface SceneChoreography {
+    version: 1;
+    dialogue: {
+        speakerID: string;
+        textID: string;
+        portraitFileName: string;
+        portraitEmote: number;
+    };
 
+    /**
+     * 
+     */
+    animations: SceneAnimation[];
 }
 
 interface SceneAnimation {
-    
+    version: 1;
+    unitName: string;
+    unitIndex: number;
+    moveToTile: TilemapPosition;
+    animationIndex: number;
 }
 
 // state
