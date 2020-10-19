@@ -10,6 +10,9 @@ interface Unit {
     role: string;
     classification: string;
     speedTier: string;
+    baseMovementFrames: number;
+    baseDescentFrames: number;
+    baseAscentFrames: number;
     skillResources: [
         {
             resource: string;
@@ -37,14 +40,10 @@ interface Unit {
             className: string;
         }
     ]
-    overworldAIs: [
+    unitAIs: [
         {
             className: string;
         }
     ]
-    unitAIs: [
-        {
-            unitAIFunctionName: string;
-        }
-    ]
+    unitAIFunctionName: string;
 }

@@ -1,7 +1,7 @@
 import { TilemapPosition } from "src/app/classes/utilities";
 
 export interface GameEvent {
-
+    eventType: string;
 }
 
 export interface PlayCutsceneGameEvent extends GameEvent {

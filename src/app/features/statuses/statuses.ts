@@ -6,5 +6,7 @@ export interface StatusEditor {
 interface Status {
     version: 1;
     nameID: string;
+    summaryID: string;
+    longDescriptionID: string;
     statusFunctionName: string;
 }

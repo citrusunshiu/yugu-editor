@@ -6,8 +6,8 @@ export interface SkillEditor {
 interface Skill {
     version: 1;
     nameID: string;
+    summaryID: string;
     descriptionID: string;
-    longDescriptionID: string;
     iconFileName: string;
     targetType: string;
     encounterSkillType: string;
@@ -34,6 +34,7 @@ interface Hit {
         {
             statusJSONFileName: string;
             procChance: number;
+            duration: number;
         }
     ]
 }
@@ -42,6 +43,7 @@ interface SkillChoreography {
     version: 1;
     nameID: string;
     animationPatternIndex: number;
+    //skillChoreographyAnimationScript: string;
     totalFrames: number;
     isAttackSpeedDependent: boolean;
     hitboxGroups: [

@@ -13,6 +13,7 @@ interface Quest {
 
 interface QuestPart {
     version: 1;
+    partType: string;
     onStartGameEvents: GameEvent[];
     onFinishGameEvents: GameEvent[];
 }
@@ -20,14 +21,29 @@ interface QuestPart {
 interface ReachDateQuestPart extends QuestPart {
     version: 1;
     year: number;
+    
+    /**
+     * Leave blank to specify no season requirement.
+     */
     season: string;
+    
+    /**
+     * Leave blank to specify no date requirement.
+     */
     date: number;
+
+    /**
+     * Leave blank to specify no time requirement.
+     */
     time: string;
 }
 
 interface ReachAreaQuestPart extends QuestPart {
     version: 1;
-    geographyName: string;
+    provinceName: string;
+    districtName: string;
+    areaName: string;
+    instanceJSONFileName: string;
 }
 
 interface ReachAreaCheckpointQuestPart extends QuestPart {

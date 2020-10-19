@@ -1,35 +1,113 @@
 import { TilemapPosition } from "src/app/classes/utilities";
 
 // classes
+/**
+ * 
+ */
 export interface CutsceneEditor {
     id: number;
 }
 
+/**
+ * Contains data used for running in-game cutscenes. 
+ * @version 0.0.1
+ */
 interface Cutscene {
+
+    /** 
+     * The version of the JSON object.
+     * 
+     * The version number should match up with the JSON Parser's version number in order to prevent data issues.
+     */
     version: 1;
+    
+    /**
+     * The string database reference ID of the cutscene's name.
+     */
     nameID: string;
+    
+    /** 
+     * The list of all scenes contained in the cutscene.
+     */
     scenes: Scene[];
 }
 
+/**
+ * Contains data used for running in-game cutscenes.
+ * @version 0.0.1
+ */
 interface Scene {
+
+    /**
+     * The version of the JSON object. 
+     * 
+     * The version number should match up with the JSON Parser's version number in order to prevent data issues.
+     */
     version: 1;
+
+    /**
+     * 
+     */
     instanceJSONFileName: string;
+    
+    /**
+     * 
+     */
     geologyInformation: {
+
+        /**
+        * 
+        */
         year: number;
+        
+        /**
+        * 
+        */
         season: string;
+        
+        /**
+        * 
+        */
         date: number;
+        
+        /**
+        * 
+        */
         time: string;
     };
+
+    /**
+     * 
+     */
     isCinematic: boolean;
+
+    /**
+     * 
+     */
     units: [
         {
+            /**
+             * 
+             */
             unitJSONFileName: string;
+
+            /**
+             * 
+             */
             unitPosition: TilemapPosition;
         }
     ];
+
+    /**
+     * 
+     */
     sceneChoreographies: SceneChoreography[];
 }
 
+/**
+ * 
+ * @version 0.0.1
+ */
 interface SceneChoreography {
     version: 1;
     dialogue: {
@@ -45,6 +123,10 @@ interface SceneChoreography {
     animations: SceneAnimation[];
 }
 
+/**
+ * 
+ * @version 0.0.1
+ */
 interface SceneAnimation {
     version: 1;
     unitName: string;
