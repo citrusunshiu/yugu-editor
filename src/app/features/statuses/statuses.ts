@@ -7,6 +7,9 @@ interface Status {
     version: 1;
     nameID: string;
     summaryID: string;
-    longDescriptionID: string;
+    descriptionID: string;
+    statusType: string;
+    statusID: string;
+    isStackable: boolean;
     statusFunctionName: string;
 }

@@ -17,7 +17,7 @@ interface Cutscene {
     /** 
      * The version of the JSON object.
      * 
-     * The version number should match up with the JSON Parser's version number in order to prevent data issues.
+     * The version number should match up with the JSON Parser's version number in order to prevent data parsing issues.
      */
     version: 1;
     
@@ -38,10 +38,10 @@ interface Cutscene {
  */
 interface Scene {
 
-    /**
-     * The version of the JSON object. 
+    /** 
+     * The version of the JSON object.
      * 
-     * The version number should match up with the JSON Parser's version number in order to prevent data issues.
+     * The version number should match up with the JSON Parser's version number in order to prevent data parsing issues.
      */
     version: 1;
 

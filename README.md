@@ -1,3 +1,17 @@
+# **Yugu Editor**
+Standalone application for creating and editing JSON assets and associated files used in [Yugu Library](https://github.com/citrusunshiu/yugu-library) projects.
+
+# **Preface**
+**This project is a work in progress; all intended features for the first release have not been implemented yet.** The full list of currently planned features and design concepts can be found at [Yugu Editor: Remaining Features & Design](https://github.com/citrusunshiu/2d-isometric-boilerplate/wiki/Yugu-Editor:-Remaining-Features-&-Design).
+
+# **Useful Links**
+* [2D Isometric Boilerplate Repository](https://github.com/citrusunshiu/2d-isometric-boilerplate)
+* [Yugu Library Repository](https://github.com/citrusunshiu/yugu-library)
+
+# **Setup**
+
+**`npm run dev` for Electron version.**
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts

@@ -43,7 +43,12 @@ interface SkillChoreography {
     version: 1;
     nameID: string;
     animationPatternIndex: number;
-    //skillChoreographyAnimationScript: string;
+
+    /**
+     * For the graphical effects used when the skill is activated.
+     */
+    animationScriptJSONFileName: string;
+    skillSoundFileName: string;
     totalFrames: number;
     isAttackSpeedDependent: boolean;
     hitboxGroups: [
@@ -60,6 +65,12 @@ interface SkillChoreography {
             ]
             hitFunctionName: string;
             hitIndex: number;
+
+            /**
+             * For the graphical effects used when the hitbox makes contact.
+             */
+            hitEffectJSONFileName: string;
+            hitSoundFileName: string;
         }
     ]
 }

@@ -18,6 +18,7 @@ interface AnimationPattern {
         {
             startFrame: number;
             spriteIndex: number;
+            frameSoundFileName: string;
         }
     ]
 }

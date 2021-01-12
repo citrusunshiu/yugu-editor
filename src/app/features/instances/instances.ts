@@ -7,6 +7,12 @@ export interface InstanceEditor {
 }
 
 interface Instance {
+    
+    /** 
+     * The version of the JSON object.
+     * 
+     * The version number should match up with the JSON Parser's version number in order to prevent data parsing issues.
+     */
     version: 1;
     nameID: string;
     geographyName: string;
@@ -33,7 +39,16 @@ interface Instance {
     ];
     unitSpawners?: [
         {
-
+            unitJSONFileName: string;
+            maxUnits: number;
+            areaOfEffect: {
+                xPos: number;
+                yPos: number;
+                zPos: number;
+                radius: number;
+            }
+            unitLevel: number;
+            unitSpawnTime: number;
         }
     ];
     gameEventMarkers?: [

@@ -28,22 +28,33 @@ interface Unit {
     magicalDefenseScaling: number;
     speedScaling: number;
     staggerThresholdScaling: number;
+    expYield: number;
+    dropTable: [
+        {
+            itemJSONFileName: string;
+            dropChance: number; // 1 = 100%; 0.1 = 10%; 0.01 = 1%; ...
+        }
+    ];
     skills: [
         {
             skillJSONFileName: string;
             levelObtained: number;
             progressionPointObtained: number;
         }
-    ]
+    ];
     actions: [
         {
             className: string;
         }
-    ]
+    ];
+
     unitAIs: [
         {
+            /**
+             * The full name of the class that will determine the unit's AI.
+             */
             className: string;
         }
-    ]
-    unitAIFunctionName: string;
+    ];
+    //unitAIClassName: string;
 }

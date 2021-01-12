@@ -2,6 +2,13 @@ import { TilemapPosition } from "src/app/classes/utilities";
 
 export interface GameEvent {
     eventType: string;
+
+    /**
+     * Unique identifier for the game event.
+     * 
+     * Used to prevent repeated execution of the same game event, if necessary.
+     */
+    eventID: number;
 }
 
 export interface PlayCutsceneGameEvent extends GameEvent {
